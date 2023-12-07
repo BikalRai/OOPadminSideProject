@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #ea3024;
+    --primary-color-diluted: #d25951;
+    --bg-color: #fdf9f1;
+    --font-color: #555555;
+    --white-color: #fff;
+    --container-width: calc(100% - 20%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.admin {
+    min-height: 100vh;
+    background-color: rgb(171, 198, 211);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    color: var(--font-color);
+}
+
+/* right nav user start*/
+.admin__dashboard-header {
+    padding: 2rem;
+    box-shadow: 0 5px 20px -10px #272e37;
+    background-color: #fff;
+}
+
+.header__content {
+    display: grid;
+    gap: 1rem;
+}
+
+.header__content form {
+    display: flex;
+    align-items: center;
+}
+
+.header__content form .search__input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.header__content form .search__input > i {
+    color: #717e90;
+}
+
+.header__content form .search__input input {
+    background-color: transparent;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.header__content form .search__input button {
+    border: none;
+    padding: 0.5rem;
+    background-color: #727cf5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.admin__dashboard-header {
+    height: fit-content;
+}
+
+.admin__dashboard-header .details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+avatar-container {
+    cursor: pointer;
+
+}
+
+.admin__dashboard-header .details .avatar-icon {
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.admin__dashboard-header .details .avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.user__dropdown {
+    position: absolute;
+    width: 100%;
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px -10px rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+}
+
+.user__dropdown button {
+    padding: 0.5em 1.5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.user__dropdown .close-box i{
+    font-size: 2rem;
+}
+
+.user__dropdown-option {
+    transition: 0.4s;
+}
+
+.user__dropdown-option:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+/* right nav user end */
+
+/*content start*/
+.admin__content {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.stats {
+    display: grid;
+    gap: 2rem;
+
+}
+
+.stat__item {
+    background-color: #fff;
+    flex: 1;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.5rem;
+}
+
+.stat__item > i {
+    font-size: 3rem;
+}
+
+.admin__bookings {
+    width: 100%;
+    background-color: #fff;
+}
+
+.admin__bookings tr{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.admin__bookings tr th, .admin__bookings tr td {
+    padding: 1rem;
+}
+
+.admin__bookings thead tr {
+    background-color: #272e37;
+    color: #fff;
+}
+
+.admin__bookings tbody tr:nth-child(even) {
+    background-color: #837e7e;
+    color: #ffffff;
+}
+
+.table__container {
+    overflow-x: scroll;
+}
+
+/*content end*/
+
+
+
+@media (min-width: 974px) {
+
+    .header__content > form > .search__input {
+        padding: 0 0 0 1rem;
+    }
+
+    .header__content > form > .search__input button {
+        padding: 1rem;
+    }
+
+    .header__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .stats {
+        display: flex;
+        gap: 2rem;
+    }
+}

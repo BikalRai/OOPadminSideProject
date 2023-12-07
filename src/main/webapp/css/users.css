@@ -1,0 +1,34 @@
+.users__table-container {
+    overflow-x: scroll;
+}
+
+.users__table {
+    background-color: #fff;
+    min-width: 100%;
+    color: var(--font-color);
+
+}
+
+.users__table tr {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
+
+.users__table tbody .password {
+    overflow-x: scroll;
+}
+
+th, td {
+    padding: 1em;
+}
+
+.users__table thead tr {
+    background-color: #272e37;
+    color: #fff;
+}
+
+.users__table tbody tr:nth-child(even) {
+    background-color: #837e7e;
+    color: #ffffff;
+}

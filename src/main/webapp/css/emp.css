@@ -1,0 +1,188 @@
+.emp__container {
+    display: grid;
+    gap: 2rem;
+}
+
+.emp__container .add__new-btn {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    padding: 1em;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.emp__table-container {
+    overflow-x: scroll;
+}
+
+.emp__table {
+    min-width: 100%;
+    background-color: #fff;
+    color: var(--font-color);
+}
+
+.emp__table tr {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+th, td {
+    padding: 1em;
+    text-align: center;
+}
+
+.emp__table thead tr {
+    background-color: #272e37;
+    color: #fff;
+}
+
+.emp__table tbody tr .extended {
+    overflow-x: scroll;
+}
+
+.emp__table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.emp__table .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.emp__table .actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.emp__table .actions button i {
+    font-size: 1.5em;
+    color: #736e6e;
+    transition: 0.4s;
+}
+
+.emp__table .actions button i:hover {
+    color: #484646;
+}
+
+.view__emp-container {
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 20px -4px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    transition: opacity 0.6s;
+}
+
+.view__emp-container button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5em 1.5em;
+    border: none;
+}
+
+.hide-view {
+    display: none;
+    opacity: 0;
+    z-index: -99999;
+}
+
+
+/*emp create*/
+#create__emp {
+    background-color: #fff;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+}
+
+#create__emp .back-btn {
+    position: absolute;
+    padding: 0.5em 1em;
+    border: none;
+    border: 1px solid var(--font-color);
+    border-radius: 0.2em;
+    top: 2rem;
+    left: 2rem;
+    color: var(--font-color);
+    cursor:pointer;
+    transition:  0.5s;
+}
+
+#create__emp .back-btn:hover {
+    opacity: 0.5;
+}
+
+#create__emp .form__item {
+    display:  flex;
+    flex-direction: column;
+}
+
+
+#create__emp label {
+    display: block;
+    font-weight: 900;
+}
+
+input {
+    padding: 0.5em;
+    outline: none;
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
+
+select, option {
+    background-color: transparent;
+    outline: none;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+
+#create__emp .actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#create__emp .actions button {
+    max-width: max-content;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.create {
+    background-color: #2acc2a;
+}
+
+.create:hover {
+    background-color: #095009;
+    color: #fff;
+}
+
+.cancel {
+    background-color: #d25951;
+}
+
+.cancel:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}

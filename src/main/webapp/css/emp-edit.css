@@ -1,0 +1,58 @@
+#emp-edit {
+    background-color: var(--white-color);
+    box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.4), -5px -5px 20px -10px rgba(0, 0, 0, 0.4);
+    display: grid;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+#emp-edit .form__fields {
+    display: grid;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#emp-edit .form__field {
+    display: flex;
+    gap: 1rem;
+    background-color: darkslategray;
+    padding: 1rem;
+    width: fit-content;
+}
+
+#emp-edit .form__field input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+#emp-edit .form__field .action {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.action button[title="done"],
+.action button[title="cancel"] {
+    display: none;
+}
+
+#emp-edit .form__field .action i{
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+@media (min-width: 1329px) {
+    #emp-edit .form__fields {
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+}
